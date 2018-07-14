@@ -1,16 +1,32 @@
 <template>
-  <div>
+  <div class="content">
     <h1>About me</h1>
     <p>This page is being rendered as <strong>{{ name }}</strong>.</p>
 
-    <p class="message">{{ message }}</p>
-    <button
-      class="button--grey"
-      @click="reverseMessage">Reverse Message</button>
+    <section>
+      <p>Message:</p>
+      <p class="message">{{ message }}</p>
+      <button
+        class="button--grey"
+        @click="reverseMessage">Reverse Message</button>
+    </section>
 
-    <nuxt-link
-      to="/"
-      class="button--grey">Home</nuxt-link>
+    <section>
+      <p>Counter:</p>
+      <p class="message">{{ counter }}</p>
+      <button
+        class="button--grey"
+        @click="incrementCounter">Increment</button>
+      <button
+        class="button--grey"
+        @click="resetCounter">Reset</button>
+    </section>
+
+    <section>
+      <nuxt-link
+        to="/"
+        class="button--grey">Home</nuxt-link>
+    </section>
   </div>
 </template>
 
@@ -24,12 +40,19 @@ export default {
   data() {
     return {
       message: "Hello world!",
+      counter: 0,
     };
   },
   methods: {
     reverseMessage: function () {
       this.message = this.message.split('').reverse().join('')
-    }
+    },
+    resetCounter: function () {
+      this.counter = 0
+    },
+    incrementCounter: function () {
+      this.counter += 1
+    },
   },
   head: {
     title: 'About page'
@@ -38,11 +61,30 @@ export default {
 </script>
 
 <style>
+.content {
+  margin: 30px;
+}
+
+h1 {
+  margin-bottom: 10px;
+}
+
+section {
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
 .message {
-  margin: 20px;
+  margin-top: 20px;
+  margin-bottom: 20px;
   padding: 10px;
   font-size: 1.5em;
   background-color: #eee;
-  font: consolas;
+}
+
+.counter {
+  font-weight: bold;
+  font-size: 1.5em;
+  padding: 10px;
 }
 </style>
