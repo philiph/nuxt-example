@@ -14,6 +14,9 @@ export default {
     return {
       name: process.static ? 'static' : (process.server ? 'server' : 'client')
     }
+  },
+  head: {
+    title: 'About page'
   }
 }
 </script>
