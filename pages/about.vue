@@ -2,8 +2,8 @@
   <div>
     <h1>About me</h1>
     <p>Hello world.</p>
-    <router-link
+    <nuxt-link
       to="/"
-      class="button--grey">Home</router-link>
+      class="button--grey">Home</nuxt-link>
   </div>
 </template>
