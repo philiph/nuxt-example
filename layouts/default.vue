@@ -1,8 +1,22 @@
 <template>
   <div>
-    <nuxt/>
+    <nav-bar />
+
+    <div class="content">
+      <nuxt/>
+    </div>
   </div>
 </template>
+
+<script>
+import NavBar from '~/components/NavBar.vue'
+
+export default {
+  components: {
+    NavBar
+  },
+}
+</script>
 
 <style>
 html {
@@ -19,6 +33,10 @@ html {
 *, *:before, *:after {
   box-sizing: border-box;
   margin: 0;
+}
+
+.content {
+  margin: 30px;
 }
 
 .button--green {

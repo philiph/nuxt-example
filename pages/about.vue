@@ -1,6 +1,6 @@
 <template>
-  <div class="content">
-    <h1>About me</h1>
+  <div>
+    <h1>About</h1>
     <p>This page is being rendered as <strong>{{ name }}</strong>.</p>
 
     <section>
@@ -20,12 +20,6 @@
       <button
         class="button--grey"
         @click="resetCounter">Reset</button>
-    </section>
-
-    <section>
-      <nuxt-link
-        to="/"
-        class="button--grey">Home</nuxt-link>
     </section>
   </div>
 </template>
@@ -61,10 +55,6 @@ export default {
 </script>
 
 <style>
-.content {
-  margin: 30px;
-}
-
 h1 {
   margin-bottom: 10px;
 }
