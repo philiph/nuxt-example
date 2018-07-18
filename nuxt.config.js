@@ -37,5 +37,11 @@ module.exports = {
   },
   css: [
     'assets/main.css'
-  ]
+  ],
+  modules: [
+    '@nuxtjs/axios',
+  ],
+  axios: {
+    // proxyHeaders: false
+  }
 }
